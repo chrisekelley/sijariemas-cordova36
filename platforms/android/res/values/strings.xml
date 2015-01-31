@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Sijariemas</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="templatePath">/sdcard/Download/fprints/</string>
+    <string name="serverUrl">https://afis.simprints.com/</string>
+    <string name="serverUrlFilepath">api/Person/</string>
+    <string name="serverKey">HH8XGFYSDU9QGZ833</string>
+    <string name="templateFormat">TEMPLATE_FORMAT_ISO19794</string>
+    <string name="projectName">Kiwi-Moz-2015</string>
+    <string name="APP_VERSION">11</string>
+    <string name="WIPE_CACHE">1</string>
+</resources>

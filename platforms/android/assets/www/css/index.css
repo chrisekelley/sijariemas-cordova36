@@ -1,0 +1,196 @@
+#header {
+    /*background-color: #8dc63f;*/
+    overflow: hidden;
+    margin-top: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    font-size: 20px;
+}
+#top-menu {
+    /*background-color: #8dc63f;*/
+    float: left;
+}
+#logo {
+    /*background-color: #5a4a42;*/
+    float: right;
+    padding-right: 1em;
+}
+#footer-menu {
+    background-color: #8dc63f;
+}
+
+#records {
+    width:100%
+}
+
+/*#records td{*/
+    /*font-size:20pt;*/
+/*}*/
+/*5a4a42*/
+#records td {
+    background-color: #ACD369;
+    padding: 10px;
+}
+#records th {
+    background-color: #C85D47;
+    font-size:20pt;
+}
+table.tablesorter {
+    background-color: #5a4a42;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    border: none;
+}
+
+/*--- reset p from bootstrap ---*/
+
+p {
+    margin : 1em 0px;
+}
+
+#content {
+    background-color: #ACD369;
+    margin-top: 0px;
+}
+
+.jumbotron {
+    padding-top: 5px;
+    padding-bottom: 48px;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    font-size: 30px;
+}
+
+/*@media (min-width: 768px)*/
+    .container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
+        margin-right: 1em;
+        margin-left: 0;
+    }
+
+.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
+    margin-right: .2em;
+    margin-left: 0;
+}
+
+.navbar-nav {
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    margin-top: 0.8em;
+}
+
+.radiodrop {
+    margin-top: 1em;
+}
+
+.radio label {
+    padding-left: 0px;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.checkbox label {
+    margin-bottom: 1em;
+    font-weight: 700;
+    /* margin-top: 5px; */
+    vertical-align: middle;
+}
+
+label {}
+
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+#dashboard-region p {
+     font-size: 28px;
+     font-weight: 500;
+}
+.siteNav {
+    font-size: 14px;
+}
+.recordName {
+    font-size: 16px;
+}
+.recordTs {
+    font-size: 16px;
+}
+#local-config label {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.localConfigCols {
+    font-size: 18px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    width:150px;
+}
+#local-config label, #local-config input {
+    display:inline-block;
+}
+#local-config input {
+    font-size:22px;
+}
+#local-config button {
+    font-size: 36px;
+    width: 100%;
+}
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.nav>li {
+    text-align: right;
+}
+
+#statusIcons {
+    float: right;
+}
+
+#uploadFailed {
+    display: none;
+}
+
+.logo-image {
+    margin-top: 7px;
+}
+
+@media (max-width: 336px) {
+    #records th {
+        font-size:12pt;
+    }
+    .btn-lg, .btn-group-lg>.btn {
+        font-size: 14px;
+        padding: 8px 8px; 
+    }
+    h1 {
+        font-size:16pt
+    }
+    h2 {
+        font-size:14pt
+    }
+    .siteNav {
+        font-size: 14px;
+    }
+    .container {
+         padding-left: 0px;
+         padding-right: 0px;
+    }
+    .nav>li>a {
+        padding: 5px 5px;
+    }
+    .jumbotron {
+        /*padding-top: 0px;*/
+    }
+    .jumbotron h1, .jumbotron .h1 {
+        font-size: 20px;
+    }
+    .recordName {
+        font-size: 16px;
+    }
+}
