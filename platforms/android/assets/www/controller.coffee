@@ -186,23 +186,30 @@ Controller =
       error: (model, err, cb) ->
               console.log JSON.stringify err
 
-  displayPatientRecords: () ->
+  displayPatientRecords: (keyword) ->
 #    console.log("adminId: " + adminId)
     viewOptions = {}
     results = new AdminCollection
-    results.fetch
+    fun = 'by_PatientId'
+    if typeof keyword != 'undefined' && keyword !=""
+      fun = 'by_PatientKeyword'
+#    results.fetch
+    options =
       fetch: 'query',
       options:
         query:
           include_docs: true,
-          fun: 'by_PatientId'
+          fun: fun
       success: =>
         viewOptions =
           collection : results
-        reportLayout = new ReportLayout();
-        Coconut.mainRegion.show reportLayout
-        reportHeaderView = new ReportHeaderDashboardView
-        reportLayout.reportHeaderRegion.show reportHeaderView
-        reportLayout.reportListingRegion.show(new ReportCompositeView viewOptions)
+        homeLayout = new HomeLayout();
+        Coconut.mainRegion.show homeLayout
+        homeHeaderView = new HomeHeaderDashboardView
+        homeLayout.homeHeaderRegion.show homeHeaderView
+        homeLayout.homeListingRegion.show(new HomeSearchCompositeView viewOptions)
       error: (model, err, cb) ->
               console.log JSON.stringify err
+    if typeof keyword != 'undefined' && keyword !=""
+      options.options.query.key = keyword
+    results.fetch options

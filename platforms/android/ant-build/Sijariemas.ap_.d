@@ -855,6 +855,8 @@
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/js-libraries/Leaflet/images/zoom-out.png \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/DashboardLayout.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/DashboardLayout.js \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/HomeLayout.coffee \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/HomeLayout.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/ReportLayout.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/layouts/ReportLayout.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/models/AdminCollection.coffee \
@@ -1060,7 +1062,10 @@
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/form.element.date.html \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/form.element.text.html \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/form.select.html \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/HomeLayout.handlebars \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/HomeRecordItemView.handlebars \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/HomeSearchRecordItemView.handlebars \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/HomeSearchView.handlebars \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/HomeView.handlebars \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/PostAdminRegistrationMenuView.handlebars \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/templates/PostUserRegistrationMenuView.handlebars \
@@ -1086,9 +1091,15 @@
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HelpView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeCompositeView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeCompositeView.js \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeHeaderDashboardView.coffee \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeHeaderDashboardView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeRecordItemView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeRecordItemView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeRecordView.js \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeSearchCompositeView.coffee \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeSearchCompositeView.js \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeSearchRecordItemView.coffee \
+/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeSearchRecordItemView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/HomeView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/LocalConfigView.coffee \
@@ -1105,7 +1116,6 @@
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/QuestionView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportCompositeView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportCompositeView.js \
-/Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportHeaderDashboardView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportHeaderDashboardView.js \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportRecordItemView.coffee \
 /Users/chrisk/source/sijariemas-cordova36/platforms/android/assets/www/views/ReportRecordItemView.js \

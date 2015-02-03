@@ -500,6 +500,11 @@ class QuestionView extends Backbone.View
 #          _.extend(Coconut.currentAdmin, currentData)
     else
       currentData.savedBy = $.cookie('current_user')
+    if @result.question() == 'Individual Registration'
+      Coconut.currentClient = null
+      uuid = CoconutUtils.uuidGenerator(30)
+      currentData.clientId = uuid
+      currentData._id = uuid
     if typeof Coconut.currentClient != 'undefined' && Coconut.currentClient != null
       currentData.clientId = Coconut.currentClient.get("_id")
       currentData.serviceUuid = Coconut.currentClient.get("serviceUuid")
@@ -530,7 +535,7 @@ class QuestionView extends Backbone.View
               Coconut.router.navigate("postAdminRegistrationMenu",true)
             else if @result.question() == 'Individual Registration'
               Coconut.currentClient = @result
-              Coconut.router.navigate("postUserRegistrationMenu",true)
+              Coconut.router.navigate("displayClientRecords",true)
             else
               Coconut.router.navigate("displayClientRecords",true)
         error: (error, msg) ->

@@ -42,6 +42,8 @@ class Router extends Backbone.Router
     "loadTestClient": "loadTestClient"
     "enroll": "enroll"
     "enroll/:user": "enroll"
+    "patient/:patientId": "showPatient"
+    "search/:keyword": "searchPatients"
     "": "displayAllRecords"
 
   route: (route, name, callback) ->
@@ -213,6 +215,11 @@ class Router extends Backbone.Router
       success: ->
         Coconut.Controller.displayPatientRecords()
 
+  searchPatients: (keywords) ->
+    @userLoggedIn
+      success: ->
+        Coconut.Controller.displayPatientRecords(keywords)
+
   loadTestClient: ->
     @userLoggedIn
       success: ->
@@ -265,6 +272,16 @@ class Router extends Backbone.Router
           success: ->
             Coconut.caseView.render()
 #        console.log("hoo ha")
+
+  showPatient: (patientId) ->
+    @userLoggedIn
+      success: ->
+        Coconut.currentClient = new Result
+          _id: patientId
+        Coconut.currentClient.fetch
+          success: ->
+            Coconut.router.navigate "displayClientRecords"
+            Coconut.Controller.displayClientRecords()
 
   configure: ->
     @userLoggedIn

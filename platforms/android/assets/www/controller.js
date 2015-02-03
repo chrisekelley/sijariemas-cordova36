@@ -228,33 +228,41 @@ Controller = {
       }
     });
   },
-  displayPatientRecords: function() {
-    var results, viewOptions,
+  displayPatientRecords: function(keyword) {
+    var fun, options, results, viewOptions,
       _this = this;
     viewOptions = {};
     results = new AdminCollection;
-    return results.fetch({
+    fun = 'by_PatientId';
+    if (typeof keyword !== 'undefined' && keyword !== "") {
+      fun = 'by_PatientKeyword';
+    }
+    options = {
       fetch: 'query',
       options: {
         query: {
           include_docs: true,
-          fun: 'by_PatientId'
+          fun: fun
         }
       },
       success: function() {
-        var reportHeaderView, reportLayout;
+        var homeHeaderView, homeLayout;
         viewOptions = {
           collection: results
         };
-        reportLayout = new ReportLayout();
-        Coconut.mainRegion.show(reportLayout);
-        reportHeaderView = new ReportHeaderDashboardView;
-        reportLayout.reportHeaderRegion.show(reportHeaderView);
-        return reportLayout.reportListingRegion.show(new ReportCompositeView(viewOptions));
+        homeLayout = new HomeLayout();
+        Coconut.mainRegion.show(homeLayout);
+        homeHeaderView = new HomeHeaderDashboardView;
+        homeLayout.homeHeaderRegion.show(homeHeaderView);
+        return homeLayout.homeListingRegion.show(new HomeSearchCompositeView(viewOptions));
       },
       error: function(model, err, cb) {
         return console.log(JSON.stringify(err));
       }
-    });
+    };
+    if (typeof keyword !== 'undefined' && keyword !== "") {
+      options.options.query.key = keyword;
+    }
+    return results.fetch(options);
   }
 };

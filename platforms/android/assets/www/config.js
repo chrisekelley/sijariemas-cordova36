@@ -37,15 +37,15 @@ function createDesignDoc(name, mapFunction) {
     return ddoc;
 }
 
-var designDocOld = createDesignDoc('by_clientId', function (doc) {
+//var designDocOld = createDesignDoc('by_clientId', function (doc) {
 //    if (doc.question) {
 //        console.log("doc.question: " + doc.question + " doc.complete: " + doc.complete);
 //        if (doc.complete && doc.complete == 'true') {
 //            emit(doc.question + ':true:' + doc.lastModifiedAt, null);
-            emit(doc.savedBy);
+//            emit(doc.savedBy);
 //        }
 //    }
-});
+//});
 
 var byClientIdDesignDoc = createDesignDoc('by_clientId', function (doc) {
     if (doc.clientId) {
@@ -76,6 +76,13 @@ var by_AdminDateDesignDoc = createDesignDoc('by_AdminDate', function(doc) {
 var by_PatientIdDesignDoc = createDesignDoc('by_PatientId', function(doc) {
   if (doc.question == 'Individual Registration') {
     emit(doc.lastModifiedAt);
+  }
+});
+
+var by_PatientKeywordDesignDoc = createDesignDoc('by_PatientKeyword', function(doc) {
+  if (doc.CountryId) {
+    console.log("doc.CountryId: " + JSON.stringify(doc));
+      emit(doc.CountryId);
   }
 });
 
@@ -156,6 +163,16 @@ Backbone.sync.defaults.db.put(by_PatientIdDesignDoc).then(function (doc) {
 }).catch(function (err) {
     if (err.name === 'conflict') {
         console.log("by_PatientId exists.")
+    }
+});
+
+Backbone.sync.defaults.db.put(by_PatientKeywordDesignDoc).then(function (doc) {
+    // design doc created!
+    console.log("by_PatientKeyword created")
+    Backbone.sync.defaults.db.query('by_PatientKeyword', {stale: 'update_after'})
+}).catch(function (err) {
+    if (err.name === 'conflict') {
+        console.log("by_PatientKeyword exists.")
     }
 });
 
